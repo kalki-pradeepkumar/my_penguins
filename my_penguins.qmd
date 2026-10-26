@@ -15,6 +15,13 @@ library(palmerpenguins)
 
 penguins |>
   group_by(species) |>
-  summarise(meanBillLength = mean(bill_length_mm, na.rm = TRUE)) 
+  summarise(meanBillLength = mean(bill_length_mm, na.rm = TRUE))  |>
+  ggplot(
+    mapping = aes(x = species, y = meanBillLength, fill = species)
+  ) + 
+  geom_bar(stat = "identity") +
+  labs(
+    title = "Mean Bill Length for Each Species"
+  )
 
 ```
