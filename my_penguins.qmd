@@ -21,7 +21,10 @@ penguins |>
   ) + 
   geom_bar(stat = "identity") +
   labs(
-    title = "Mean Bill Length for Each Species"
+    title = "Mean Bill Length for Each Species",
+    x = "Species",
+    y = "Mean Bill Length",
+    fill = "Species Color"
   )
 
 ```
