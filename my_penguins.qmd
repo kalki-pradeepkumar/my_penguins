@@ -1,0 +1,20 @@
+---
+title: "my_penguins"
+author: "Kalki Pradeepkumar"
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+summary(penguins)
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+
+penguins |>
+  group_by(species) |>
+  summarise(meanBillLength = mean(bill_length_mm, na.rm = TRUE)) 
+
+```
